@@ -9,9 +9,6 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-# Print API key for debugging
-print(f"API Key: {api_key}")
-
 if not api_key:
     raise ValueError("OPENAI_API_KEY environment variable must be set")
 client = OpenAI(api_key=api_key)
