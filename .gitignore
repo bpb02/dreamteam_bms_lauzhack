@@ -2,3 +2,6 @@
 files/
 data/
 FRONTEND/.env
+.env
+FRONTEND/constants.py
+check.py

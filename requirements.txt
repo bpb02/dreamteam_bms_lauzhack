@@ -4,3 +4,6 @@ numpy
 sklearn
 matplotlib
 seaborn
+openai
+streamlit
+

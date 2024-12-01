@@ -4,9 +4,17 @@ from glob import glob
 from openai import OpenAI
 import json
 from pathlib import Path
+from dotenv import load_dotenv
 
-# Initialize OpenAI client with API key from environment variable
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Print API key for debugging
+print(f"API Key: {api_key}")
+
+if not api_key:
+    raise ValueError("OPENAI_API_KEY environment variable must be set")
+client = OpenAI(api_key=api_key)
 
 # Create cache directory if it doesn't exist
 cache_dir = Path("cache")
